@@ -11,7 +11,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: myrenic/docker-example  # Ensure this is lowercase
+  IMAGE_NAME: myrenic/docker-example  # Ensure this is lowercase, replace username with your github username
 
 jobs:
   build:

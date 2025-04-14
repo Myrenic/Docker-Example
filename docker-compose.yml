@@ -2,12 +2,12 @@ version: '3'
 
 services:
   backend:
-    image: GITHUB_USERNAME/hello-docker-backend:latest
+    image: ghcr.io/myrenic/docker-example-backend:latest # Ensure to change username to your GitHub username
     ports:
       - "5032:5000"
 
   frontend:
-    image: GITHUB_USERNAME/hello-docker-frontend:latest
+    image: ghcr.io/myrenic/docker-example-frontend:latest # Ensure to change username to your GitHub username
     ports:
       - "8072:80"
     depends_on:

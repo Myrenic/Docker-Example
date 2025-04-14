@@ -2,3 +2,6 @@
 
 # Specify the version of Flask to be installed.
 Flask==2.0.3
+
+# use cors
+flask-cors

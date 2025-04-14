@@ -11,7 +11,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: myrenic/example  # Ensure this is lowercase
+  IMAGE_NAME: myrenic/docker-example  # Ensure this is lowercase
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
       with:
         context: frontend/
         push: true
-        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-hello-docker-backend:latest
+        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
     - name: Build and push Docker image
@@ -45,6 +45,6 @@ jobs:
       with:
         context: frontend/
         push: true
-        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-hello-docker-frontend:latest
+        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-frontend:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max

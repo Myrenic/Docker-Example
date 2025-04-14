@@ -3,12 +3,16 @@ version: '3'
 services:
   backend:
     image: ghcr.io/myrenic/docker-example-backend:latest # Ensure to change username to your GitHub username
+    container_name: backend-service
     ports:
-      - "5032:5000"
+      - "5000:5000"
 
   frontend:
     image: ghcr.io/myrenic/docker-example-frontend:latest # Ensure to change username to your GitHub username
+    container_name: frontend-service
     ports:
-      - "8072:80"
+      - "8080:80"
     depends_on:
       - backend
+    environment:
+      - API_URL=http://backend-service:5000/api/hello # Ensure this matches the port used in the backend service.

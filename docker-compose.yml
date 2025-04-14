@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backend:
+    image: GITHUB_USERNAME/hello-docker-backend:latest
+    ports:
+      - "5032:5000"
+
+  frontend:
+    image: GITHUB_USERNAME/hello-docker-frontend:latest
+    ports:
+      - "8072:80"
+    depends_on:
+      - backend

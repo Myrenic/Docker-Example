@@ -1,0 +1,4 @@
+# This file is used by Docker to install all the dependencies for the application.
+
+# Specify the version of Flask to be installed.
+Flask==2.0.3

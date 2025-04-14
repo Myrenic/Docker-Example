@@ -1,8 +1,12 @@
 # Import the Flask class and the jsonify function from the flask module
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 # Create an instance of the Flask class. This instance will be our WSGI application.
 app = Flask(__name__)
+
+# Enable CORS for the entire Flask application
+CORS(app)
 
 # Define a route for the URL /api/hello. This means that when a user visits /api/hello,
 # the function hello() will be called.

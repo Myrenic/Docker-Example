@@ -33,7 +33,7 @@ jobs:
 
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v6
       with:
         context: backend/
         push: true
@@ -41,7 +41,7 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
     - name: Build and push Docker image
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v6
       with:
         context: frontend/
         push: true
